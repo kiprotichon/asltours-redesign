@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Services | ASL Tours & Travel</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              50: '#f0f9ff', 100: '#e0f2fe', 200: '#bae6fd', 300: '#7dd3fc',
+              400: '#38bdf8', 500: '#0ea5e9', 600: '#0284c7', 700: '#0369a1',
+              800: '#075985', 900: '#0c4a6e',
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    .glass-nav {
+      background: rgba(255, 255, 255, 0.75);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border-bottom: 1px solid rgba(14, 165, 233, 0.15);
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .glass-nav.scrolled {
+      background: rgba(255, 255, 255, 0.95);
+      box-shadow: 0 4px 30px rgba(2, 132, 199, 0.12);
+    }
+    .card-hover { transition: all 0.35s ease; }
+    .card-hover:hover { transform: translateY(-6px); box-shadow: 0 20px 40px -12px rgba(2, 132, 199, 0.2); }
+  </style>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased">
+
+  <header id="navbar" class="glass-nav fixed top-0 left-0 right-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16 lg:h-20">
+        <a href="index.html" class="flex items-center group">
+          <img src="logo-blue.png" alt="ASL Tours & Travel" class="h-11 lg:h-14 w-auto object-contain group-hover:scale-105 transition duration-300">
+        </a>
+        <nav class="hidden lg:flex items-center gap-8">
+          <a href="index.html" class="text-slate-600 hover:text-brand-600 font-medium transition">Home</a>
+          <a href="about.html" class="text-slate-600 hover:text-brand-600 font-medium transition">About</a>
+          <a href="services.html" class="text-brand-700 font-semibold border-b-2 border-brand-500 pb-1">Services</a>
+          <a href="destinations.html" class="text-slate-600 hover:text-brand-600 font-medium transition">Packages</a>
+          <a href="gallery.html" class="text-slate-600 hover:text-brand-600 font-medium transition">Gallery</a>
+          <a href="contact.html" class="text-slate-600 hover:text-brand-600 font-medium transition">Contact</a>
+        </nav>
+        <div class="flex items-center gap-3">
+          <a href="contact.html" class="hidden sm:inline-flex items-center gap-2 bg-brand-500 hover:bg-brand-600 text-white font-semibold px-5 py-2.5 rounded-full shadow-lg shadow-brand-500/30 transition">
+            Book Now <i class="fas fa-arrow-right text-sm"></i>
+          </a>
+          <button id="menuBtn" class="lg:hidden w-10 h-10 flex items-center justify-center rounded-lg text-brand-700 hover:bg-brand-50">
+            <i class="fas fa-bars text-xl"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div id="mobileMenu" class="hidden lg:hidden border-t border-brand-100 bg-white/95 backdrop-blur-xl">
+      <div class="px-4 py-4 space-y-1">
+        <a href="index.html" class="block px-4 py-3 rounded-lg text-slate-700 hover:bg-brand-50">Home</a>
+        <a href="about.html" class="block px-4 py-3 rounded-lg text-slate-700 hover:bg-brand-50">About</a>
+        <a href="services.html" class="block px-4 py-3 rounded-lg bg-brand-50 text-brand-700 font-semibold">Services</a>
+        <a href="destinations.html" class="block px-4 py-3 rounded-lg text-slate-700 hover:bg-brand-50">Packages</a>
+        <a href="gallery.html" class="block px-4 py-3 rounded-lg text-slate-700 hover:bg-brand-50">Gallery</a>
+        <a href="contact.html" class="block px-4 py-3 rounded-lg text-slate-700 hover:bg-brand-50">Contact</a>
+        <a href="contact.html" class="mt-3 block text-center bg-brand-500 text-white font-semibold py-3 rounded-xl">Book Now</a>
+      </div>
+    </div>
+  </header>
+
+  <section class="pt-28 pb-16 bg-gradient-to-br from-brand-600 to-brand-800 text-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h1 class="text-4xl lg:text-5xl font-bold mb-4">Our Services</h1>
+      <p class="text-brand-100 text-lg max-w-2xl">One stop for endless possibilities. Explore with ease.</p>
+    </div>
+  </section>
+
+  <section class="py-16 lg:py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        
+        <div class="card-hover bg-white rounded-2xl p-8 border border-slate-100 shadow-sm">
+          <div class="w-14 h-14 bg-brand-500 rounded-xl flex items-center justify-center text-white text-2xl mb-6">
+            <i class="fas fa-binoculars"></i>
+          </div>
+          <h3 class="font-bold text-xl text-slate-900 mb-3">Tours & Safari</h3>
+          <p class="text-slate-600 text-sm leading-relaxed mb-4">
+            Witness the Big Five and beyond. Custom and scheduled safaris across Maasai Mara, Amboseli, Lake Nakuru, Tsavo, Samburu and more.
+          </p>
+          <ul class="text-sm text-slate-500 space-y-1">
+            <li>• Private & group departures</li>
+            <li>• Expert local guides</li>
+            <li>• 4x4 game drive vehicles</li>
+          </ul>
+        </div>
+
+        <div class="card-hover bg-white rounded-2xl p-8 border border-slate-100 shadow-sm">
+          <div class="w-14 h-14 bg-brand-500 rounded-xl flex items-center justify-center text-white text-2xl mb-6">
+            <i class="fas fa-hotel"></i>
+          </div>
+          <h3 class="font-bold text-xl text-slate-900 mb-3">Hotel Booking</h3>
+          <p class="text-slate-600 text-sm leading-relaxed mb-4">
+            Unlock hidden travel gems. We secure competitive rates at lodges, tented camps, boutique hotels and resorts across Kenya.
+          </p>
+          <ul class="text-sm text-slate-500 space-y-1">
+            <li>• Budget to luxury options</li>
+            <li>• Exclusive partner rates</li>
+            <li>• Flexible cancellation policies</li>
+          </ul>
+        </div>
+
+        <div class="card-hover bg-white rounded-2xl p-8 border border-slate-100 shadow-sm">
+          <div class="w-14 h-14 bg-brand-500 rounded-xl flex items-center justify-center text-white text-2xl mb-6">
+            <i class="fas fa-plane"></i>
+          </div>
+          <h3 class="font-bold text-xl text-slate-900 mb-3">Flight Booking</h3>
+          <p class="text-slate-600 text-sm leading-relaxed mb-4">
+            Fuel your wanderlust. Domestic and international flight tickets arranged with major airlines and competitive fares.
+          </p>
+          <ul class="text-sm text-slate-500 space-y-1">
+            <li>• Domestic & regional flights</li>
+            <li>• International connections</li>
+            <li>• Seat selection assistance</li>
+          </ul>
+        </div>
+
+        <div class="card-hover bg-white rounded-2xl p-8 border border-slate-100 shadow-sm">
+          <div class="w-14 h-14 bg-brand-500 rounded-xl flex items-center justify-center text-white text-2xl mb-6">
+            <i class="fas fa-passport"></i>
+          </div>
+          <h3 class="font-bold text-xl text-slate-900 mb-3">Visa Application</h3>
+          <p class="text-slate-600 text-sm leading-relaxed mb-4">
+            Fast-track your visa journey. Efficient application process for eCitizen, East African Tourist Visa and other requirements.
+          </p>
+          <ul class="text-sm text-slate-500 space-y-1">
+            <li>• eCitizen support</li>
+            <li>• Document checklist</li>
+            <li>• Status tracking</li>
+          </ul>
+        </div>
+
+        <div class="card-hover bg-white rounded-2xl p-8 border border-slate-100 shadow-sm">
+          <div class="w-14 h-14 bg-brand-500 rounded-xl flex items-center justify-center text-white text-2xl mb-6">
+            <i class="fas fa-shield-alt"></i>
+          </div>
+          <h3 class="font-bold text-xl text-slate-900 mb-3">Travel Insurance</h3>
+          <p class="text-slate-600 text-sm leading-relaxed mb-4">
+            Travel with peace of mind. Comprehensive cover for medical emergencies, trip cancellation, baggage and more.
+          </p>
+          <ul class="text-sm text-slate-500 space-y-1">
+            <li>• Medical & evacuation</li>
+            <li>• Trip interruption</li>
+            <li>• Competitive premiums</li>
+          </ul>
+        </div>
+
+        <div class="card-hover bg-white rounded-2xl p-8 border border-slate-100 shadow-sm">
+          <div class="w-14 h-14 bg-brand-500 rounded-xl flex items-center justify-center text-white text-2xl mb-6">
+            <i class="fas fa-car"></i>
+          </div>
+          <h3 class="font-bold text-xl text-slate-900 mb-3">Airport Transfer</h3>
+          <p class="text-slate-600 text-sm leading-relaxed mb-4">
+            Reliable door-to-door transfers from Eldoret, Nairobi (JKIA/Wilson) and other airports to your hotel or destination.
+          </p>
+          <ul class="text-sm text-slate-500 space-y-1">
+            <li>• Private & shared options</li>
+            <li>• Meet & greet service</li>
+            <li>• 24/7 availability</li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="py-16 bg-brand-50">
+    <div class="max-w-4xl mx-auto px-4 text-center">
+      <h2 class="text-3xl font-bold text-slate-900 mb-4">Need a Custom Package?</h2>
+      <p class="text-slate-600 mb-8">Tell us your dates, group size and interests — we’ll design the perfect itinerary.</p>
+      <a href="contact.html" class="inline-flex items-center gap-2 bg-brand-500 hover:bg-brand-600 text-white font-bold px-8 py-3.5 rounded-full transition">
+        Request Custom Quote <i class="fas fa-arrow-right"></i>
+      </a>
+    </div>
+  </section>
+
+  <footer class="bg-slate-900 text-slate-300 pt-16 pb-8">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
+        <div>
+          <div class="mb-5">
+            <img src="logo-white.png" alt="ASL Tours & Travel" class="h-14 w-auto object-contain">
+          </div>
+          <p class="text-sm leading-relaxed">Your trusted partner for Kenyan adventures.</p>
+        </div>
+        <div>
+          <h4 class="text-white font-semibold mb-4">Quick Links</h4>
+          <ul class="space-y-2 text-sm">
+            <li><a href="index.html" class="hover:text-brand-400">Home</a></li>
+            <li><a href="about.html" class="hover:text-brand-400">About</a></li>
+            <li><a href="destinations.html" class="hover:text-brand-400">Packages</a></li>
+            <li><a href="contact.html" class="hover:text-brand-400">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-white font-semibold mb-4">Services</h4>
+          <ul class="space-y-2 text-sm">
+            <li>Tours & Safari</li>
+            <li>Hotel Booking</li>
+            <li>Flights & Visas</li>
+            <li>Airport Transfers</li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-white font-semibold mb-4">Contact</h4>
+          <ul class="space-y-3 text-sm">
+            <li class="flex items-start gap-3">
+              <i class="fas fa-map-marker-alt text-brand-400 mt-1"></i>
+              <span>Khetia's Building, 4th Floor<br>Ronald Ngala St, Eldoret</span>
+            </li>
+            <li class="flex items-center gap-3">
+              <i class="fas fa-phone text-brand-400"></i>
+              <a href="tel:+254727223299">+254 727 223 299</a>
+            </li>
+            <li class="flex items-center gap-3">
+              <i class="fas fa-envelope text-brand-400"></i>
+              <a href="mailto:info@asltours.co.ke">info@asltours.co.ke</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="border-t border-slate-800 pt-8 text-center text-sm text-slate-500">
+        © 2026 ASL Tours & Travel. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => navbar.classList.toggle('scrolled', window.scrollY > 40));
+    const menuBtn = document.getElementById('menuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    menuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+      menuBtn.querySelector('i').classList.toggle('fa-bars');
+      menuBtn.querySelector('i').classList.toggle('fa-times');
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ASL Tours & Travel | Your Destination Awaits</title>
+  <meta name="description" content="Experience authentic Kenyan safaris, camping adventures, hotel bookings, flights and visa services with ASL Tours & Travel based in Eldoret." />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              50: '#f0f9ff',
+              100: '#e0f2fe',
+              200: '#bae6fd',
+              300: '#7dd3fc',
+              400: '#38bdf8',
+              500: '#0ea5e9',
+              600: '#0284c7',
+              700: '#0369a1',
+              800: '#075985',
+              900: '#0c4a6e',
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    .glass-nav {
+      background: rgba(255, 255, 255, 0.75);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border-bottom: 1px solid rgba(14, 165, 233, 0.15);
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .glass-nav.scrolled {
+      background: rgba(255, 255, 255, 0.95);
+      box-shadow: 0 4px 30px rgba(2, 132, 199, 0.12);
+      border-bottom-color: rgba(14, 165, 233, 0.25);
+    }
+    .hero-gradient {
+      background: linear-gradient(135deg, rgba(2, 132, 199, 0.85) 0%, rgba(14, 165, 233, 0.7) 50%, rgba(3, 105, 161, 0.8) 100%);
+    }
+    .card-hover {
+      transition: all 0.35s ease;
+    }
+    .card-hover:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 20px 40px -12px rgba(2, 132, 199, 0.25);
+    }
+  </style>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased">
+
+  <!-- Morphing Glass Navbar -->
+  <header id="navbar" class="glass-nav fixed top-0 left-0 right-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16 lg:h-20">
+        <!-- Logo -->
+        <a href="index.html" class="flex items-center group">
+          <img src="logo-blue.png" alt="ASL Tours & Travel" class="h-11 lg:h-14 w-auto object-contain group-hover:scale-105 transition duration-300">
+        </a>
+
+        <!-- Desktop Nav -->
+        <nav class="hidden lg:flex items-center gap-8">
+          <a href="index.html" class="text-brand-700 font-semibold border-b-2 border-brand-500 pb-1">Home</a>
+          <a href="about.html" class="text-slate-600 hover:text-brand-600 font-medium transition">About</a>
+          <a href="services.html" class="text-slate-600 hover:text-brand-600 font-medium transition">Services</a>
+          <a href="destinations.html" class="text-slate-600 hover:text-brand-600 font-medium transition">Packages</a>
+          <a href="gallery.html" class="text-slate-600 hover:text-brand-600 font-medium transition">Gallery</a>
+          <a href="contact.html" class="text-slate-600 hover:text-brand-600 font-medium transition">Contact</a>
+        </nav>
+
+        <div class="flex items-center gap-3">
+          <a href="contact.html" class="hidden sm:inline-flex items-center gap-2 bg-brand-500 hover:bg-brand-600 text-white font-semibold px-5 py-2.5 rounded-full shadow-lg shadow-brand-500/30 transition">
+            Book Now <i class="fas fa-arrow-right text-sm"></i>
+          </a>
+          <!-- Mobile menu button -->
+          <button id="menuBtn" class="lg:hidden w-10 h-10 flex items-center justify-center rounded-lg text-brand-700 hover:bg-brand-50">
+            <i class="fas fa-bars text-xl"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobileMenu" class="hidden lg:hidden border-t border-brand-100 bg-white/95 backdrop-blur-xl">
+      <div class="px-4 py-4 space-y-1">
+        <a href="index.html" class="block px-4 py-3 rounded-lg bg-brand-50 text-brand-700 font-semibold">Home</a>
+        <a href="about.html" class="block px-4 py-3 rounded-lg text-slate-700 hover:bg-brand-50">About</a>
+        <a href="services.html" class="block px-4 py-3 rounded-lg text-slate-700 hover:bg-brand-50">Services</a>
+        <a href="destinations.html" class="block px-4 py-3 rounded-lg text-slate-700 hover:bg-brand-50">Packages</a>
+        <a href="gallery.html" class="block px-4 py-3 rounded-lg text-slate-700 hover:bg-brand-50">Gallery</a>
+        <a href="contact.html" class="block px-4 py-3 rounded-lg text-slate-700 hover:bg-brand-50">Contact</a>
+        <a href="contact.html" class="mt-3 block text-center bg-brand-500 text-white font-semibold py-3 rounded-xl">Book Now</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="relative min-h-screen flex items-center pt-20">
+    <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1516426122078-c23e76319801?q=80&w=2000');"></div>
+    <div class="absolute inset-0 hero-gradient"></div>
+    
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-28 w-full">
+      <div class="max-w-3xl">
+        <span class="inline-block bg-white/20 backdrop-blur text-white text-sm font-medium px-4 py-1.5 rounded-full mb-6 border border-white/30">
+          <i class="fas fa-map-marker-alt mr-2"></i>Based in Eldoret, Kenya
+        </span>
+        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6">
+          Unforgettable Kenyan<br>
+          <span class="text-brand-200">Safaris & Adventures</span>
+        </h1>
+        <p class="text-lg sm:text-xl text-white/90 mb-10 max-w-xl leading-relaxed">
+          From the Maasai Mara to hidden camping gems — we handle every detail so you can focus on the experience of a lifetime.
+        </p>
+        <div class="flex flex-wrap gap-4">
+          <a href="destinations.html" class="inline-flex items-center gap-2 bg-white text-brand-700 font-bold px-7 py-3.5 rounded-full shadow-xl hover:bg-brand-50 transition">
+            View Packages <i class="fas fa-compass"></i>
+          </a>
+          <a href="contact.html" class="inline-flex items-center gap-2 bg-transparent border-2 border-white text-white font-semibold px-7 py-3.5 rounded-full hover:bg-white/10 transition">
+            Get a Free Quote
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Quick Services -->
+  <section class="py-16 lg:py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl lg:text-4xl font-bold text-slate-900 mb-3">One Stop for Endless Possibilities</h2>
+        <p class="text-slate-600 max-w-2xl mx-auto">Explore with ease. We take care of every detail of your Kenyan adventure.</p>
+      </div>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <a href="services.html" class="card-hover bg-brand-50 rounded-2xl p-6 border border-brand-100 group">
+          <div class="w-14 h-14 bg-brand-500 rounded-xl flex items-center justify-center text-white text-2xl mb-5 group-hover:scale-110 transition">
+            <i class="fas fa-binoculars"></i>
+          </div>
+          <h3 class="font-bold text-lg text-slate-900 mb-2">Tours & Safari</h3>
+          <p class="text-slate-600 text-sm">Witness the Big Five and beyond across Kenya’s national parks.</p>
+        </a>
+        <a href="services.html" class="card-hover bg-brand-50 rounded-2xl p-6 border border-brand-100 group">
+          <div class="w-14 h-14 bg-brand-500 rounded-xl flex items-center justify-center text-white text-2xl mb-5 group-hover:scale-110 transition">
+            <i class="fas fa-hotel"></i>
+          </div>
+          <h3 class="font-bold text-lg text-slate-900 mb-2">Hotel Booking</h3>
+          <p class="text-slate-600 text-sm">Hand-picked lodges, camps and hotels at exclusive rates.</p>
+        </a>
+        <a href="services.html" class="card-hover bg-brand-50 rounded-2xl p-6 border border-brand-100 group">
+          <div class="w-14 h-14 bg-brand-500 rounded-xl flex items-center justify-center text-white text-2xl mb-5 group-hover:scale-110 transition">
+            <i class="fas fa-plane"></i>
+          </div>
+          <h3 class="font-bold text-lg text-slate-900 mb-2">Flight Booking</h3>
+          <p class="text-slate-600 text-sm">Domestic and international flights arranged seamlessly.</p>
+        </a>
+        <a href="services.html" class="card-hover bg-brand-50 rounded-2xl p-6 border border-brand-100 group">
+          <div class="w-14 h-14 bg-brand-500 rounded-xl flex items-center justify-center text-white text-2xl mb-5 group-hover:scale-110 transition">
+            <i class="fas fa-passport"></i>
+          </div>
+          <h3 class="font-bold text-lg text-slate-900 mb-2">Visa & Insurance</h3>
+          <p class="text-slate-600 text-sm">Fast-track visa applications and comprehensive travel cover.</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Packages -->
+  <section class="py-16 lg:py-20 bg-slate-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-10">
+        <div>
+          <h2 class="text-3xl lg:text-4xl font-bold text-slate-900 mb-2">Popular Safari Packages</h2>
+          <p class="text-slate-600">Curated experiences for every type of traveler</p>
+        </div>
+        <a href="destinations.html" class="text-brand-600 font-semibold hover:text-brand-700 flex items-center gap-2">
+          View all packages <i class="fas fa-arrow-right"></i>
+        </a>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Package 1 -->
+        <div class="card-hover bg-white rounded-2xl overflow-hidden shadow-sm border border-slate-100">
+          <div class="h-52 bg-cover bg-center relative" style="background-image: url('https://images.unsplash.com/photo-1547970810-dc1eac37b7f4?q=80&w=800');">
+            <span class="absolute top-4 left-4 bg-brand-500 text-white text-xs font-bold px-3 py-1 rounded-full">BEST SELLER</span>
+          </div>
+          <div class="p-6">
+            <div class="flex items-center gap-2 text-sm text-slate-500 mb-2">
+              <i class="fas fa-clock"></i> 3 Days / 2 Nights
+            </div>
+            <h3 class="font-bold text-xl text-slate-900 mb-2">Maasai Mara Classic</h3>
+            <p class="text-slate-600 text-sm mb-4">Game drives, Big Five viewing and authentic Maasai cultural visit.</p>
+            <div class="flex items-center justify-between">
+              <div>
+                <span class="text-slate-400 text-sm">From</span>
+                <p class="text-2xl font-bold text-brand-600">KES 48,500</p>
+                <span class="text-xs text-slate-500">per person sharing</span>
+              </div>
+              <a href="contact.html" class="bg-brand-500 hover:bg-brand-600 text-white font-semibold px-4 py-2 rounded-lg text-sm transition">Enquire</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Package 2 -->
+        <div class="card-hover bg-white rounded-2xl overflow-hidden shadow-sm border border-slate-100">
+          <div class="h-52 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1523805009345-7448845a9e53?q=80&w=800');"></div>
+          <div class="p-6">
+            <div class="flex items-center gap-2 text-sm text-slate-500 mb-2">
+              <i class="fas fa-clock"></i> 4 Days / 3 Nights
+            </div>
+            <h3 class="font-bold text-xl text-slate-900 mb-2">Amboseli & Kilimanjaro</h3>
+            <p class="text-slate-600 text-sm mb-4">Elephants against the backdrop of snow-capped Kilimanjaro.</p>
+            <div class="flex items-center justify-between">
+              <div>
+                <span class="text-slate-400 text-sm">From</span>
+                <p class="text-2xl font-bold text-brand-600">KES 62,000</p>
+                <span class="text-xs text-slate-500">per person sharing</span>
+              </div>
+              <a href="contact.html" class="bg-brand-500 hover:bg-brand-600 text-white font-semibold px-4 py-2 rounded-lg text-sm transition">Enquire</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Package 3 -->
+        <div class="card-hover bg-white rounded-2xl overflow-hidden shadow-sm border border-slate-100">
+          <div class="h-52 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?q=80&w=800');"></div>
+          <div class="p-6">
+            <div class="flex items-center gap-2 text-sm text-slate-500 mb-2">
+              <i class="fas fa-clock"></i> 2 Days / 1 Night
+            </div>
+            <h3 class="font-bold text-xl text-slate-900 mb-2">Lake Nakuru Weekend</h3>
+            <p class="text-slate-600 text-sm mb-4">Flamingos, rhinos and scenic Rift Valley views — perfect short escape.</p>
+            <div class="flex items-center justify-between">
+              <div>
+                <span class="text-slate-400 text-sm">From</span>
+                <p class="text-2xl font-bold text-brand-600">KES 28,900</p>
+                <span class="text-xs text-slate-500">per person sharing</span>
+              </div>
+              <a href="contact.html" class="bg-brand-500 hover:bg-brand-600 text-white font-semibold px-4 py-2 rounded-lg text-sm transition">Enquire</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Animated Stats -->
+  <section id="stats" class="py-14 bg-brand-600 text-white overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-2 lg:grid-cols-4 gap-8 text-center">
+        <div class="stat-item">
+          <p class="text-4xl lg:text-5xl font-bold mb-1"><span class="counter" data-target="500">0</span>+</p>
+          <p class="text-brand-100 text-sm uppercase tracking-wider">Happy Travelers</p>
+        </div>
+        <div class="stat-item">
+          <p class="text-4xl lg:text-5xl font-bold mb-1"><span class="counter" data-target="35">0</span>+</p>
+          <p class="text-brand-100 text-sm uppercase tracking-wider">Safari Packages</p>
+        </div>
+        <div class="stat-item">
+          <p class="text-4xl lg:text-5xl font-bold mb-1"><span class="counter" data-target="12">0</span>+</p>
+          <p class="text-brand-100 text-sm uppercase tracking-wider">Destinations</p>
+        </div>
+        <div class="stat-item">
+          <p class="text-4xl lg:text-5xl font-bold mb-1"><span class="counter" data-target="4.9" data-decimal="true">0</span>★</p>
+          <p class="text-brand-100 text-sm uppercase tracking-wider">Client Rating</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Choose Us -->
+  <section class="py-16 lg:py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl lg:text-4xl font-bold text-slate-900 mb-3">Why Choose ASL Tours?</h2>
+        <p class="text-slate-600 max-w-2xl mx-auto">We go the extra mile so every journey feels personal, seamless and unforgettable.</p>
+      </div>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
+        <div class="card-hover bg-slate-50 rounded-2xl p-6 border border-slate-100 text-center">
+          <div class="w-14 h-14 bg-brand-100 text-brand-600 rounded-2xl flex items-center justify-center text-2xl mx-auto mb-5">
+            <i class="fas fa-map-marked-alt"></i>
+          </div>
+          <h3 class="font-bold text-lg text-slate-900 mb-2">Local Expertise</h3>
+          <p class="text-slate-600 text-sm">Born and based in Eldoret, we know the roads, the parks and the hidden gems most operators miss.</p>
+        </div>
+
+        <div class="card-hover bg-slate-50 rounded-2xl p-6 border border-slate-100 text-center">
+          <div class="w-14 h-14 bg-brand-100 text-brand-600 rounded-2xl flex items-center justify-center text-2xl mx-auto mb-5">
+            <i class="fas fa-hand-holding-heart"></i>
+          </div>
+          <h3 class="font-bold text-lg text-slate-900 mb-2">Personalized Service</h3>
+          <p class="text-slate-600 text-sm">Every itinerary is tailored to your group size, budget and interests — never a one-size-fits-all package.</p>
+        </div>
+
+        <div class="card-hover bg-slate-50 rounded-2xl p-6 border border-slate-100 text-center">
+          <div class="w-14 h-14 bg-brand-100 text-brand-600 rounded-2xl flex items-center justify-center text-2xl mx-auto mb-5">
+            <i class="fas fa-shield-alt"></i>
+          </div>
+          <h3 class="font-bold text-lg text-slate-900 mb-2">Safe & Reliable</h3>
+          <p class="text-slate-600 text-sm">Licensed vehicles, experienced guides and full support from booking to the moment you return home.</p>
+        </div>
+
+        <div class="card-hover bg-slate-50 rounded-2xl p-6 border border-slate-100 text-center">
+          <div class="w-14 h-14 bg-brand-100 text-brand-600 rounded-2xl flex items-center justify-center text-2xl mx-auto mb-5">
+            <i class="fas fa-tags"></i>
+          </div>
+          <h3 class="font-bold text-lg text-slate-900 mb-2">Transparent Pricing</h3>
+          <p class="text-slate-600 text-sm">Clear quotes with no hidden costs. You know exactly what you’re paying for before you book.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQs -->
+  <section class="py-16 lg:py-20 bg-slate-50">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl lg:text-4xl font-bold text-slate-900 mb-3">Frequently Asked Questions</h2>
+        <p class="text-slate-600">Quick answers to common questions about our safaris and services.</p>
+      </div>
+
+      <div class="space-y-4" id="faqAccordion">
+        <!-- FAQ 1 -->
+        <div class="bg-white rounded-xl border border-slate-200 overflow-hidden">
+          <button class="faq-btn w-full flex items-center justify-between px-5 py-4 text-left font-semibold text-slate-900 hover:bg-slate-50 transition">
+            <span>What is included in the safari packages?</span>
+            <i class="fas fa-chevron-down text-brand-500 transition-transform"></i>
+          </button>
+          <div class="faq-content hidden px-5 pb-4 text-slate-600 text-sm leading-relaxed">
+            Most packages include park fees, accommodation (full board), professional driver-guide, game drives in a 4x4 vehicle, and airport/hotel transfers where stated. Flights, visas, personal expenses and tips are usually extra unless specified.
+          </div>
+        </div>
+
+        <!-- FAQ 2 -->
+        <div class="bg-white rounded-xl border border-slate-200 overflow-hidden">
+          <button class="faq-btn w-full flex items-center justify-between px-5 py-4 text-left font-semibold text-slate-900 hover:bg-slate-50 transition">
+            <span>How do I book and what is the payment process?</span>
+            <i class="fas fa-chevron-down text-brand-500 transition-transform"></i>
+          </button>
+          <div class="faq-content hidden px-5 pb-4 text-slate-600 text-sm leading-relaxed">
+            Simply fill the contact form, WhatsApp or call us. We’ll send a tailored quote. A deposit (usually 30–50%) confirms the booking, with the balance due before the trip. We accept M-Pesa, bank transfer and major cards.
+          </div>
+        </div>
+
+        <!-- FAQ 3 -->
+        <div class="bg-white rounded-xl border border-slate-200 overflow-hidden">
+          <button class="faq-btn w-full flex items-center justify-between px-5 py-4 text-left font-semibold text-slate-900 hover:bg-slate-50 transition">
+            <span>Are the packages suitable for families and children?</span>
+            <i class="fas fa-chevron-down text-brand-500 transition-transform"></i>
+          </button>
+          <div class="faq-content hidden px-5 pb-4 text-slate-600 text-sm leading-relaxed">
+            Yes. We regularly design family-friendly itineraries with shorter game drives, child-friendly lodges and activities suitable for different ages. Let us know the ages of the children when enquiring.
+          </div>
+        </div>
+
+        <!-- FAQ 4 -->
+        <div class="bg-white rounded-xl border border-slate-200 overflow-hidden">
+          <button class="faq-btn w-full flex items-center justify-between px-5 py-4 text-left font-semibold text-slate-900 hover:bg-slate-50 transition">
+            <span>Can you arrange custom / private safaris?</span>
+            <i class="fas fa-chevron-down text-brand-500 transition-transform"></i>
+          </button>
+          <div class="faq-content hidden px-5 pb-4 text-slate-600 text-sm leading-relaxed">
+            Absolutely. All our packages can be customized. Tell us your preferred dates, group size, budget and must-see destinations and we’ll build a private itinerary just for you.
+          </div>
+        </div>
+
+        <!-- FAQ 5 -->
+        <div class="bg-white rounded-xl border border-slate-200 overflow-hidden">
+          <button class="faq-btn w-full flex items-center justify-between px-5 py-4 text-left font-semibold text-slate-900 hover:bg-slate-50 transition">
+            <span>Where is your office and can I visit?</span>
+            <i class="fas fa-chevron-down text-brand-500 transition-transform"></i>
+          </button>
+          <div class="faq-content hidden px-5 pb-4 text-slate-600 text-sm leading-relaxed">
+            We are located on the 4th Floor of Khetia's Building, Ronald Ngala Street, Eldoret. You’re welcome to visit during office hours (Mon–Sat 8am–6pm). Please call ahead so we can prepare for you.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-16 lg:py-20">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="bg-gradient-to-r from-brand-600 to-brand-700 rounded-3xl p-8 lg:p-12 text-center text-white relative overflow-hidden">
+        <div class="relative z-10">
+          <h2 class="text-3xl lg:text-4xl font-bold mb-4">Ready for Your Kenyan Adventure?</h2>
+          <p class="text-brand-100 text-lg mb-8 max-w-2xl mx-auto">Tell us your dream itinerary and we’ll create a personalized quote within 24 hours.</p>
+          <div class="flex flex-wrap justify-center gap-4">
+            <a href="contact.html" class="bg-white text-brand-700 font-bold px-8 py-3.5 rounded-full hover:bg-brand-50 transition">Request Quote</a>
+            <a href="https://wa.me/254727223299" target="_blank" class="bg-green-500 hover:bg-green-600 text-white font-bold px-8 py-3.5 rounded-full transition flex items-center gap-2">
+              <i class="fab fa-whatsapp text-xl"></i> WhatsApp Us
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-slate-900 text-slate-300 pt-16 pb-8">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
+        <div>
+          <div class="mb-5">
+            <img src="logo-white.png" alt="ASL Tours & Travel" class="h-14 w-auto object-contain">
+          </div>
+          <p class="text-sm leading-relaxed mb-5">Unforgettable safaris, vibrant cultures and breathtaking landscapes await. Craft your dream Kenyan adventure with us.</p>
+          <div class="flex gap-3">
+            <a href="#" class="w-10 h-10 rounded-full bg-slate-800 hover:bg-brand-500 flex items-center justify-center transition"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="w-10 h-10 rounded-full bg-slate-800 hover:bg-brand-500 flex items-center justify-center transition"><i class="fab fa-instagram"></i></a>
+            <a href="https://wa.me/254727223299" class="w-10 h-10 rounded-full bg-slate-800 hover:bg-green-500 flex items-center justify-center transition"><i class="fab fa-whatsapp"></i></a>
+          </div>
+        </div>
+        <div>
+          <h4 class="text-white font-semibold mb-4">Quick Links</h4>
+          <ul class="space-y-2 text-sm">
+            <li><a href="index.html" class="hover:text-brand-400 transition">Home</a></li>
+            <li><a href="about.html" class="hover:text-brand-400 transition">About Us</a></li>
+            <li><a href="services.html" class="hover:text-brand-400 transition">Services</a></li>
+            <li><a href="destinations.html" class="hover:text-brand-400 transition">Packages</a></li>
+            <li><a href="gallery.html" class="hover:text-brand-400 transition">Gallery</a></li>
+            <li><a href="contact.html" class="hover:text-brand-400 transition">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-white font-semibold mb-4">Services</h4>
+          <ul class="space-y-2 text-sm">
+            <li>Tours & Safari</li>
+            <li>Hotel Reservation</li>
+            <li>Flight Booking</li>
+            <li>Visa Applications</li>
+            <li>Travel Insurance</li>
+            <li>Airport Transfer</li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-white font-semibold mb-4">Contact</h4>
+          <ul class="space-y-3 text-sm">
+            <li class="flex items-start gap-3">
+              <i class="fas fa-map-marker-alt text-brand-400 mt-1"></i>
+              <span>Khetia's Building, 4th Floor<br>Ronald Ngala Street, Eldoret</span>
+            </li>
+            <li class="flex items-center gap-3">
+              <i class="fas fa-phone text-brand-400"></i>
+              <a href="tel:+254727223299" class="hover:text-brand-400">+254 727 223 299</a>
+            </li>
+            <li class="flex items-center gap-3">
+              <i class="fas fa-envelope text-brand-400"></i>
+              <a href="mailto:info@asltours.co.ke" class="hover:text-brand-400">info@asltours.co.ke</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="border-t border-slate-800 pt-8 text-center text-sm text-slate-500">
+        © 2026 ASL Tours & Travel. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Morphing navbar
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 40) {
+        navbar.classList.add('scrolled');
+      } else {
+        navbar.classList.remove('scrolled');
+      }
+    });
+
+    // Mobile menu
+    const menuBtn = document.getElementById('menuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    menuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+      const icon = menuBtn.querySelector('i');
+      icon.classList.toggle('fa-bars');
+      icon.classList.toggle('fa-times');
+    });
+
+    // Animated counters
+    const counters = document.querySelectorAll('.counter');
+    let countersStarted = false;
+
+    function animateCounters() {
+      if (countersStarted) return;
+      countersStarted = true;
+
+      counters.forEach(counter => {
+        const target = parseFloat(counter.getAttribute('data-target'));
+        const isDecimal = counter.getAttribute('data-decimal') === 'true';
+        const duration = 1800;
+        const startTime = performance.now();
+
+        function update(currentTime) {
+          const elapsed = currentTime - startTime;
+          const progress = Math.min(elapsed / duration, 1);
+          // easeOutQuart
+          const eased = 1 - Math.pow(1 - progress, 4);
+          const value = target * eased;
+
+          if (isDecimal) {
+            counter.textContent = value.toFixed(1);
+          } else {
+            counter.textContent = Math.floor(value);
+          }
+
+          if (progress < 1) {
+            requestAnimationFrame(update);
+          } else {
+            counter.textContent = isDecimal ? target.toFixed(1) : target;
+          }
+        }
+        requestAnimationFrame(update);
+      });
+    }
+
+    // Trigger counters when stats section is in view
+    const statsSection = document.getElementById('stats');
+    if (statsSection) {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            animateCounters();
+            observer.disconnect();
+          }
+        });
+      }, { threshold: 0.4 });
+      observer.observe(statsSection);
+    }
+
+    // FAQ accordion
+    document.querySelectorAll('.faq-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const content = btn.nextElementSibling;
+        const icon = btn.querySelector('i');
+        const isOpen = !content.classList.contains('hidden');
+
+        // Close all
+        document.querySelectorAll('.faq-content').forEach(c => c.classList.add('hidden'));
+        document.querySelectorAll('.faq-btn i').forEach(i => i.classList.remove('rotate-180'));
+
+        // Open clicked if it was closed
+        if (!isOpen) {
+          content.classList.remove('hidden');
+          icon.classList.add('rotate-180');
+        }
+      });
+    });
+  </script>
+</body>
+</html>
